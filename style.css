@@ -6,15 +6,14 @@
 
 #darklight-page{
     width: 2%;
-    height: 90%;
+    height: auto;
     overflow: hidden;
-}
-#darklight-page a{
     text-decoration: none;
 }
 #dark-url{
     width: 90%;
     height: 90%;
+    float: right;
 }
 #go-button{
     width: 4%;
@@ -25,7 +24,7 @@
 }
 #dark-frame{
     width: 100%;
-    height: 94%;
+    height: 95%;
 }
 
 body{
