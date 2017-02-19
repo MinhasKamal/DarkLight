@@ -1,7 +1,7 @@
 var iframe = document.getElementsByTagName('iframe')[0];
 iframe.src="javascript:'<h1><a href=\"https://github.com/MinhasKamal/DarkLight\" target=\"_blank\">DarkLight</a></h1>"+
     "<p>For viewing a page in night mode- paste the link in the URL box & press enter.</p>"+
-    "<p>The page may be loaded slowly, so please be patient. If the website (like- StackOverflow, GitHub) does not allow framing, the page will not load</p>'";
+    "<p>The page may be loaded slowly, so please be patient. If the website does not allow framing (like- StackOverflow, GitHub), then the page will not load.</p>'";
    
 var enterPressed = function(e){
     if(e.keyCode == 13){
@@ -10,7 +10,10 @@ var enterPressed = function(e){
     }
 };
 var load = function(){
-    loadURL(document.getElementById("dark-url").value);
+    var url = document.getElementById("dark-url").value;
+    if(url.length>0){
+        loadURL(url);
+    }
 };
 var loadURL = function(src){
     url = src;
