@@ -1,5 +1,8 @@
 var iframe = document.getElementsByTagName('iframe')[0];
-
+iframe.src="javascript:'<h1><a href=\"https://github.com/MinhasKamal/DarkLight\" target=\"_blank\">DarkLight</a></h1>"+
+    "<p>For viewing a page in night mode- paste the link in the URL box & press enter.</p>"+
+    "<p>The page may be loaded slowly, so please be patient. If the website (like- StackOverflow, GitHub) does not allow framing, the page will not load</p>'";
+   
 var enterPressed = function(e){
     if(e.keyCode == 13){
         load();
@@ -23,6 +26,9 @@ var getData = function(data){
 var loadHTML = function(html){
     iframe.src = 'about:blank';
     iframe.contentWindow.document.open();
-    iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'));
+    iframe.contentWindow.document.write(html.replace(/<head>/i, 
+        '<head><base href="' + url + '">' +
+        '<script>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</script>' +
+        '<style>img{filter: invert(1);}</style>'));
     iframe.contentWindow.document.close();
 };
