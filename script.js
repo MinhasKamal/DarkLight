@@ -29,6 +29,6 @@ var loadHTML = function(html){
     iframe.contentWindow.document.write(html.replace(/<head>/i, 
         '<head><base href="' + url + '">' +
         '<script>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</script>' +
-        '<style>img{filter: invert(1);}</style>'));
+        '<style>img{filter:invert(1);-webkit-filter:invert(1);}</style>'));
     iframe.contentWindow.document.close();
 };
