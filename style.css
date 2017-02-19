@@ -1,22 +1,15 @@
 #dark-url{
-    width: 80%;
+    width: 94%;
     height: 5%;
+}
+#go-button{
+    width: 4%;
+    height: 5%;
+    padding: 0;
 }
 #dark-frame{
     width: 100%;
     height: 95%;
-}
-#go-button{
-    width: 5%;
-    height: 5%;
-}
-#darklight-page{
-    width: 14%;
-    height: 5%;
-}
-#darklight-page a{
-    float: right;
-    color: black;
 }
 
 body{
