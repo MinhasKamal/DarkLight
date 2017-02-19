@@ -2,7 +2,7 @@ var iframe = document.getElementsByTagName('iframe')[0];
 iframe.src="javascript:'<h1><a href=\"https://github.com/MinhasKamal/DarkLight\" target=\"_blank\">DarkLight</a></h1>"+
     "<p>For viewing a page in night mode- paste the link in the URL box & press enter.</p>"+
     "<p>The page may be loaded slowly, so please be patient. If the website does not allow framing (like- StackOverflow, GitHub), then the page will not load.</p>'";
-   
+
 var enterPressed = function(e){
     if(e.keyCode == 13){
         load();
@@ -24,7 +24,7 @@ var loadURL = function(src){
 var getData = function(data){
     if (data && data.query && data.query.results && data.query.results.resources && data.query.results.resources.content && data.query.results.resources.status == 200) loadHTML(data.query.results.resources.content);
     else if (data && data.error && data.error.description) loadHTML(data.error.description);
-    else loadHTML('Error: Cannot load ' + url);
+    else loadHTML('Sorry! Cannot load ' + url + '.');
 };
 var loadHTML = function(html){
     iframe.src = 'about:blank';
@@ -35,3 +35,13 @@ var loadHTML = function(html){
         '<style>img{filter:invert(1);-webkit-filter:invert(1);}</style>'));
     iframe.contentWindow.document.close();
 };
+
+var getParameter = function(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+};
+var urlParameter = getParameter('url');
+if(urlParameter && urlParameter.length>0){
+    document.getElementById("dark-url").value = urlParameter;
+    load();
+}
