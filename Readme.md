@@ -5,9 +5,7 @@
 
 Go to [DarkLight](), simply paste the website link in the URL box, & click <kbd>enter</kbd>. 
 
-The page may be loaded slowly, so please be patient. If the page does not show after some time (approximately 8-10 sec), then hit refresh and try to load the page again.
-
-You may not see any thing (even after refreshing), if the website (like- StackOverflow, GitHub) does not allow framing.
+The page may be loaded slowly, so please be patient. If the website (like- StackOverflow, GitHub) does not allow framing, the page will not load.
 
 **Note:** I would suggest not to login to any site in this mode, because it may compromise your security.
 
