@@ -1,13 +1,23 @@
 <h1> <img src="https://github.com/MinhasKamal/DarkLight/raw/master/res/darklight-icon.png" width="24" height=auto /> DarkLight </h1>
 #### Webpage in Night Mode
 
+This application shows any webpage in night mode, so that you can read it in the dark or dim light putting minimum stress over the eye.
+
+### Website
+
+[DarkLight ↑](https://minhaskamal.github.io/DarkLight/)
+
 ### Usage
 
-Go to [DarkLight](), simply paste the website link in the URL box, & click <kbd>enter</kbd>. 
+Go to [DarkLight](https://minhaskamal.github.io/DarkLight/). For viewing a page in night mode- paste the link in the URL box & press enter.
 
-The page may be loaded slowly, so please be patient. If the website (like- StackOverflow, GitHub) does not allow framing, the page will not load.
+The page may be loaded slowly, so please be patient. If the website does not allow framing (like- StackOverflow, GitHub), then the page will not load.
 
-**Note:** I would suggest not to login to any site in this mode, because it may compromise your security.
+You can also create night mode link for any webpage-
+    https://minhaskamal.github.io/DarkLight/?url=[your-webpage-link]
+    example: https://minhaskamal.github.io/DarkLight/?url=https://www.reddit.com/r/programming
+
+**Note:** It is suggested not to login to any site in this mode, because it may compromise your security.
 
 ### View
   <div align="center">
