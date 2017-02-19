@@ -1,7 +1,4 @@
 var iframe = document.getElementsByTagName('iframe')[0];
-iframe.src="javascript:'<h1><a href=\"https://github.com/MinhasKamal/DarkLight\" target=\"_blank\">DarkLight</a></h1>"+
-    "<p>For viewing a page in night mode- paste the link in the URL box & press enter.</p>"+
-    "<p>The page may be loaded slowly, so please be patient. If the website does not allow framing (like- StackOverflow, GitHub), then the page will not load.</p>'";
 
 var enterPressed = function(e){
     if(e.keyCode == 13){
@@ -35,13 +32,19 @@ var loadHTML = function(html){
         '<style>img{filter:invert(1);-webkit-filter:invert(1);}</style>'));
     iframe.contentWindow.document.close();
 };
-
 var getParameter = function(name) {
     var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 };
+
 var urlParameter = getParameter('url');
 if(urlParameter && urlParameter.length>0){
     document.getElementById("dark-url").value = urlParameter;
     load();
+}else{
+    iframe.src="javascript:'<h1><a href=\"https://github.com/MinhasKamal/DarkLight\" target=\"_blank\">DarkLight</a></h1>"+
+    "<p>For viewing a page in night mode- paste the link in the URL box & press enter.</p>"+
+    "<p>The page may be loaded slowly, so please be patient. If the website does not allow framing (like- StackOverflow, GitHub), then the page will not load.</p>"+
+    "<p>You can also create night mode link for any webpage- <br /> &nbsp;&nbsp;&nbsp; https://minhaskamal.github.io/DarkLight/?url=[your-webpage-link] <br /> &nbsp;&nbsp;&nbsp; Example: <a href=\"https://minhaskamal.github.io/DarkLight/?url=https://www.reddit.com/r/programming\" target=\"_blank\">https://minhaskamal.github.io/DarkLight/?url=https://www.reddit.com/r/programming</a></p>'";
+
 }
