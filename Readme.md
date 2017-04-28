@@ -1,13 +1,16 @@
 <h1> <img src="https://github.com/MinhasKamal/DarkLight/raw/master/res/darklight-icon.png" width="24" height=auto /> DarkLight </h1>
+
 #### Webpage in Night Mode
 
 This application shows any webpage in night mode, so that you can read it in the dark or dim light putting minimum stress over the eye.
+
+If certain websites are blocked in your location, or by your ISP, or from the browser; [DarkLight](https://minhaskamal.github.io/DarkLight/) can help you there too!
 
 ### Website
 
 [DarkLight ↑](https://minhaskamal.github.io/DarkLight/)
 
-### Usage
+### How to Use?
 
 Go to [DarkLight](https://minhaskamal.github.io/DarkLight/). For viewing a page in night mode- paste the link in the URL box & press enter.
 
